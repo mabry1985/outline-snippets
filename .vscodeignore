@@ -1,6 +1,4 @@
 .vscode
 .gitignore
 .vscode/test.code-snippets
-images/*.psd
-images/screenshot-*
 node_modules
