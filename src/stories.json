@@ -1,0 +1,42 @@
+{
+  "Create LitElement Component With lit-html": {
+    "prefix": "outline story",
+    "body": [
+      "import { html, TemplateResult } from 'lit';",
+      "import { ifDefined } from 'lit/directives/if-defined';",
+      "import './${TM_FILENAME_BASE}';",
+      "",
+      "export default {",
+      "\ttitle: '${TM_FILENAME_BASE/([a-z]*)(-)?/${1:/capitalize}/g}',",
+      "\tcomponent: '${TM_FILENAME_BASE}',",
+      "\targTypes: {",
+      "\t\tstringProp: {",
+      "\t\t\tcontrol: {",
+      "\t\t\t\ttype: 'text',",
+      "\t\t\t},",
+      "\t\t},",
+      "\t},",
+      "\targs: {",
+      "\t\tstringProp: 'default value',",
+      "\t},",
+      "};",
+      "",
+      "const Template = ({",
+      "\tstringProp,",
+      "}): TemplateResult =>",
+      "\thtml`",
+      "\t\t<${TM_FILENAME_BASE}",
+      "\t\t\tstringProp='${ifDefined(url)}'",
+      "\t\t>",
+      "\t\t</${TM_FILENAME_BASE}>",
+      "\t`;",
+      "",
+      "export const ${TM_FILENAME_BASE/([a-z]*)(-)?/${1:/capitalize}/g}Variation = Template.bind({});",
+      "${TM_FILENAME_BASE/([a-z]*)(-)?/${1:/capitalize}/g}Variation.args = {",
+      "\tstringProp: 'overwrite template property',",
+      "};",
+      ""
+    ],
+    "description": "New Storybook story template"
+  }
+}
