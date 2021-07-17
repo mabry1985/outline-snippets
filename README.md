@@ -1,22 +1,26 @@
-# Lit snippets
+# Outline snippets
 
-Lit snippets for Visual Studio Code.
-
-## Screenshots
-
-#### JavaScript
-
-![Javascript Demo](https://github.com/litelement-dev/lit-snippets/raw/master/images/screenshot-js.gif)
-
-#### TypeScript
-
-![Typescript Demo](https://github.com/litelement-dev/lit-snippets/raw/master/images/screenshot-ts.gif)
+Snippets for the Outline Design system. Extended from [Lit Snippets](https://marketplace.visualstudio.com/items?itemName=lit.lit-snippets) to add Outline specific commands to speed up development.
 
 ## Features
 
--   Supports both JavaScript and TypeScript with Lit 2.0
+- Supports TypeScript with Lit 2.0
 
 ## List
+
+Includes all snippets from [Lit Snippets](https://marketplace.visualstudio.com/items?itemName=lit.lit-snippets) as well as additional Outline specific commands for scaffolding components and stories
+
+### OutlineElement
+
+| Trigger          | Snippet                                                 |
+| ---------------- | ------------------------------------------------------- |
+| outline template | Create Outline subclass with styles and render function |
+
+### OutlineElement
+
+| Trigger       | Snippet                                  |
+| ------------- | ---------------------------------------- |
+| outline story | Create Outline component Storybook story |
 
 ### Element and Its Property Snippets
 
@@ -56,8 +60,8 @@ Lit snippets for Visual Studio Code.
 
 ## Contact
 
-Issues [issues](https://github.com/litelement-dev/lit-snippet/issues) or for any features, please tweet us [@herberthobregon](https://twitter.com/herberthobregon).
+(TODO)
 
 ## License
 
-Please read [License](https://github.com/litelement-dev/lit-snippet/blob/master/LICENSE.md) for more information
+MIT
