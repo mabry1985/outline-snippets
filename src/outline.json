@@ -2,7 +2,7 @@
   "Create Outline Component With lit-html": {
     "prefix": "outline template",
     "body": [
-      "import { TemplateResult } from 'lit';",
+      "import { TemplateResult, html } from 'lit';",
       "import { OutlineElement } from '../outline-element/outline-element';",
       "import { customElement, property } from 'lit/decorators.js'",
       "import componentStyles from './${TM_FILENAME_BASE}.css.lit';",
