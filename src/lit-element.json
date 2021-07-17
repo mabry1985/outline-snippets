@@ -1,0 +1,151 @@
+{
+  "Generate Render Function With lit-html": {
+    "prefix": ["litrender", "render"],
+    "body": ["render() {", "\treturn html`${0}`;", "}"],
+    "description": "Generate render function with lit-html"
+  },
+  "Generate LitElement Static Styles": {
+    "prefix": ["litstyles"],
+    "body": ["static styles = [css`${0}`];"]
+  },
+  "Add New Event Listener": {
+    "prefix": ["addeventlistener"],
+    "body": ["this.addEventListener('${1:eventName}', ${2:handler});${0}"]
+  },
+  "Dispatch Event": {
+    "prefix": ["litdispatchevent", "litfire", "dispatchevent", "fire"],
+    "body": [
+      "this.dispatchEvent(new CustomEvent('${1:eventName}', { detail: ${2:data}}));${0}"
+    ]
+  },
+  "Import Element": {
+    "prefix": ["litimportele", "importele"],
+    "body": ["import '${0}';"]
+  },
+  "Generate Connected Callback": {
+    "prefix": ["litconnectedcallback", "connectedcallback"],
+    "body": [
+      "connectedCallback() {",
+      "\tsuper.connectedCallback();",
+      "\t${0}",
+      "}"
+    ],
+    "description": "Generate connectedCallback(): Invoked when a component is added to the document's DOM."
+  },
+  "Generate Disconnected Callback": {
+    "prefix": ["litdisconnectedcallback", "disconnectedcallback"],
+    "body": [
+      "disconnectedCallback() {",
+      "\tsuper.disconnectedCallback();",
+      "\t${0}",
+      "}"
+    ],
+    "description": "Generate disconnectedCallback(): Invoked when a component is removed from the document's DOM."
+  },
+  "Generate Adopted Callback": {
+    "prefix": ["litadoptedcallback", "adoptedcallback"],
+    "body": [
+      "adoptedCallback() {",
+      "\tsuper.adoptedCallback();",
+      "\t${0}",
+      "}"
+    ],
+    "description": "Generate adoptedCallback(): Invoked when a component is moved to a new document."
+  },
+  "Generate Observed Attributes": {
+    "prefix": ["observedattributes"],
+    "body": [
+      "static get observedAttributes() { return ['${1:nameOfAttribute}']; }"
+    ],
+    "description": "Generate observedAttributes getter: Returns an array containing the names of the attributes you want to observe."
+  },
+  "Create LitElement Component": {
+    "prefix": "litbase",
+    "body": [
+      "import { LitElement, customElement } from 'lit-element';",
+      "",
+      "@customElement('${TM_FILENAME_BASE}')",
+      "export class ${TM_FILENAME_BASE/([a-z]*)(-)?/${1:/capitalize}/g} extends LitElement {",
+      "\t${0}",
+      "}",
+      ""
+    ],
+    "description": "New LitElement subclass"
+  },
+  "Create LitElement Component With lit-html": {
+    "prefix": "lit template",
+    "body": [
+      "import { LitElement, html, css } from 'lit';",
+      "import { customElement, property } from 'lit/decorators'",
+      "",
+      "@customElement('${TM_FILENAME_BASE}')",
+      "export class ${TM_FILENAME_BASE/([a-z]*)(-)?/${1:/capitalize}/g} extends LitElement {",
+      "\tstatic styles = [",
+      "\t\tcss`",
+      "\t\t\t:host {",
+      "\t\t\t\tdisplay: block;",
+      "\t\t\t}",
+      "\t\t`",
+      "\t];",
+      "",
+      "\trender() {",
+      "\t\treturn html`${0}`;",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "New LitElement subclass with lit-html"
+  },
+  "Create @conectate/ct-lit Component": {
+    "prefix": "ctlit template",
+    "body": [
+      "import { CtLit, html, css, customElement, property } from '@conectate/ct-lit';",
+      "",
+      "@customElement('${TM_FILENAME_BASE}')",
+      "export class ${TM_FILENAME_BASE/([a-z]*)(-)?/${1:/capitalize}/g} extends CtLit {",
+      "\tstatic styles = [",
+      "\t\tcss`",
+      "\t\t\t:host {",
+      "\t\t\t\tdisplay: block;",
+      "\t\t\t}",
+      "\t\t`",
+      "\t];",
+      "",
+      "\trender() {",
+      "\t\treturn html`${0}`;",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "New CtLit subclass"
+  },
+  "Generate LitElement Property": {
+    "prefix": ["litprop"],
+    "body": [
+      "@property({ type: ${1|String,Number,Boolean,Array,Object|} }) ${2:propName}: ${3:any};${0}"
+    ],
+    "description": "Generate LitElement Property"
+  },
+  "Generate Element Query Property": {
+    "prefix": ["litquery"],
+    "body": ["@query('${1:queryString}') ${2:propName}: ${3:HTMLElement};${0}"],
+    "description": "Generate Element Query Property"
+  },
+  "Generate Elements Query Property": {
+    "prefix": ["litqueryall"],
+    "body": [
+      "@queryAll('${1:queryString}') ${2:propName}: NodeListOf<${3:HTMLElement}>;${0}"
+    ],
+    "description": "Generate Elements Query Property"
+  },
+  "Generate Attribute Changed Callback": {
+    "prefix": ["litattributechangedcallback"],
+    "body": [
+      "attributeChangedCallback(name: string, oldValue: string, newValue: string) {",
+      "\tsuper.attributeChangedCallback(name, oldValue, newValue);",
+      "\t${0}",
+      "}"
+    ],
+    "description": "Generate attributeChangedCallback(): Invoked when component attribute changes."
+  }
+}
