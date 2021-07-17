@@ -16,7 +16,7 @@ Includes all snippets from [Lit Snippets](https://marketplace.visualstudio.com/i
 | ---------------- | ------------------------------------------------------- |
 | outline template | Create Outline subclass with styles and render function |
 
-### OutlineElement
+### Outline Story
 
 | Trigger       | Snippet                                  |
 | ------------- | ---------------------------------------- |
