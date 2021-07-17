@@ -1,0 +1,31 @@
+{
+  "Create Outline Component With lit-html": {
+    "prefix": "outline template",
+    "body": [
+      "import { TemplateResult } from 'lit';",
+      "import { OutlineElement } from '../outline-element/outline-element';",
+      "import { customElement, property } from 'lit/decorators.js'",
+      "import componentStyles from '${TM_FILENAME_BASE}';",
+      "",
+      "/**",
+      "\t* The ${TM_FILENAME_BASE/([a-z]*)(-)?/${1:/capitalize}/g} component",
+      "\t* @element ${TM_FILENAME_BASE}",
+      "\t*/",
+      "@customElement('${TM_FILENAME_BASE}')",
+      "export class ${TM_FILENAME_BASE/([a-z]*)(-)?/${1:/capitalize}/g} extends OutlineElement {",
+      "\tstatic styles = [componentStyles]",
+      "",
+      "/**",
+      "\t* Document property here",
+      "\t*/",
+      "@property({ type: String, attribute: 'property-var'})",
+      "propertyVar: string = 'default';",
+      "\trender(): TemplateResult {",
+      "\t\treturn html`${0}`;",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "New OutlineElement subclass with lit-html"
+  }
+}
