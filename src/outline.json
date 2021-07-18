@@ -28,5 +28,30 @@
       ""
     ],
     "description": "New OutlineElement subclass with lit-html"
+  },
+  "Create Outline testing suite": {
+    "prefix": "outline test",
+    "body": [
+      "import { ${TM_FILENAME/^([^.]+)\\..+$/${1:/pascalcase}/} } from '../${TM_FILENAME/(.*?)\\..+/$1/}';",
+      "import { assert, fixture, html } from '@open-wc/testing';",
+      "",
+      "describe('${TM_FILENAME/(.*?)\\..+/$1/}', () => {",
+      "\tit('is defined', () => {",
+      "\t\tconst el = document.createElement('${TM_FILENAME/(.*?)\\..+/$1/}');",
+      "\t\tassert.instanceOf(el, ${TM_FILENAME/^([^.]+)\\..+$/${1:/pascalcase}/});",
+      "\t});",
+      "",
+      "\tit('renders with default values', async () => {",
+      "\t\tconst el = await fixture(html`<${TM_FILENAME/(.*?)\\..+/$1/}></${TM_FILENAME/(.*?)\\..+/$1/}>`);",
+      "\t\tassert.shadowDom.equal(",
+      "\t\t\tel,",
+      "\t\t\t`${0}",
+      "\t\t\t<div>Component Content Here</div>",
+      "\t\t`",
+      "\t\t);",
+      "\t});",
+      "});"
+    ],
+    "description": "Add testing for Outline component"
   }
 }
