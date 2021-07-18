@@ -54,11 +54,12 @@
     "url": "https://github.com/mabry1985/outline-snippets/issues"
   },
   "homepage": "https://github.com/mabry1985/outline-snippets#readme",
-  "devDependencies": {
-    "vsce": "^1.92.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "dist": "vsce publish",
     "package": "vsce package"
+  },
+  "dependencies": {
+    "vsce": "^1.95.1"
   }
 }
