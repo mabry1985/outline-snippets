@@ -7,7 +7,7 @@
       "import './${TM_FILENAME/(.*?)\\..+/$1/}';",
       "",
       "export default {",
-      "\ttitle: '${TM_FILENAME/^([^.]+)\\..+$/${1:/pascalcase}/}',",
+      "\ttitle: '${0}/${TM_FILENAME/^([^.]+)\\..+$/${1:/pascalcase}/}',",
       "\tcomponent: '${TM_FILENAME/(.*?)\\..+/$1/}',",
       "\targTypes: {",
       "\t\tstringProp: {",
