@@ -58,6 +58,9 @@
     "vsce": "^1.92.0"
   },
   "scripts": {
-    "dist": "vsce publish"
+    "dist": "vsce publish",
+    "package": "vsce package",
+    "install:ext": "code --install-extension ./outline-snippets-1.1.2.vsix",
+    "uninstall": "code --install-extension ./outline-snippets-1.1.2.vsix"
   }
 }
