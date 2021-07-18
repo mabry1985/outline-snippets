@@ -1,5 +1,5 @@
 {
-  "Create LitElement Component With lit-html": {
+  "Create Component Story": {
     "prefix": "outline story",
     "body": [
       "import { html, TemplateResult } from 'lit';",
@@ -7,7 +7,7 @@
       "import './${TM_FILENAME/(.*?)\\..+/$1/}';",
       "",
       "export default {",
-      "\ttitle: '${TM_FILENAME/(.*?)\\..+/${1:/([a-z]*)(-)?/${1:/capitalize}}/g}',",
+      "\ttitle: '${TM_FILENAME/^([^.]+)\\..+$/${1:/pascalcase}/}',",
       "\tcomponent: '${TM_FILENAME/(.*?)\\..+/$1/}',",
       "\targTypes: {",
       "\t\tstringProp: {",
@@ -31,8 +31,8 @@
       "\t\t</${TM_FILENAME/(.*?)\\..+/$1/}>",
       "\t`;",
       "",
-      "export const ${TM_FILENAME/(.*?)\\..+/${1:/([a-z]*)(-)?/${1:/capitalize}}/g}Variation = Template.bind({});",
-      "${TM_FILENAME/(.*?)\\..+/${1:/([a-z]*)(-)?/${1:/capitalize}}/g}Variation.args = {",
+      "export const ${TM_FILENAME/^([^.]+)\\..+$/${1:/pascalcase}/}Variation = Template.bind({});",
+      "${TM_FILENAME/^([^.]+)\\..+$/${1:/pascalcase}/}Variation.args = {",
       "\tstringProp: 'overwrite template property',",
       "};",
       ""
