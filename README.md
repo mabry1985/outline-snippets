@@ -66,7 +66,7 @@ Install dependencies
 To package extension locally
 `yarn run package`
 
-Install package at root
+Install package
 `code --install-extension ./outlne-snippets-<version number>.vsix`
 
 Uninstall package
