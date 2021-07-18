@@ -2,7 +2,7 @@
   "Create Component Story": {
     "prefix": "outline story",
     "body": [
-      "import { html, TemplateResult } from 'lit';",
+      "import { html, TemplateResult } from 'lit-element';",
       "import { ifDefined } from 'lit/directives/if-defined';",
       "import './${TM_FILENAME/(.*?)\\..+/$1/}';",
       "",
