@@ -1,2 +1,4 @@
-1.1.5
-Focus cursor on story title for outline story template
+1.1.6
+
+- Add testing snippet
+- Refactor story snippet import
