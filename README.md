@@ -58,6 +58,23 @@ Includes all snippets from [Lit Snippets](https://marketplace.visualstudio.com/i
 | --------- | -------------------- |
 | importele | Import other element |
 
+## Development
+
+Install dependencies
+`yarn install`
+
+To package extension locally
+`yarn run package`
+
+Install package at root
+`code --install-extension ./outlne-snippets-<version number>.vsix`
+
+Uninstall package
+`code --uninstall-extension ./outlne-snippets-<version number>.vsix`
+
+Publish package
+`yarn run dist`
+
 ## Contact
 
 (TODO)
