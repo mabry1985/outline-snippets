@@ -22,6 +22,12 @@ Includes all snippets from [Lit Snippets](https://marketplace.visualstudio.com/i
 | ------------- | ---------------------------------------- |
 | outline story | Create Outline component Storybook story |
 
+### Outline Testing
+
+| Trigger      | Snippet                       |
+| ------------ | ----------------------------- |
+| outline test | Create Outline component test |
+
 ### Element and Its Property Snippets
 
 | Trigger        | Snippet                                                      |
