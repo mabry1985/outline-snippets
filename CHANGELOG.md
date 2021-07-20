@@ -1,4 +1,3 @@
-1.1.6
+1.1.7
 
-- Add testing snippet
-- Refactor story snippet import
+- Revert html import back to Lit in story template
