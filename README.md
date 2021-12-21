@@ -73,10 +73,10 @@ To package extension locally
 `yarn run package`
 
 Install package
-`code --install-extension ./outlne-snippets-<version number>.vsix`
+`code --install-extension ./outline-snippets-<version number>.vsix`
 
 Uninstall package
-`code --uninstall-extension ./outlne-snippets-<version number>.vsix`
+`code --uninstall-extension ./outline-snippets-<version number>.vsix`
 
 Publish package
 `yarn run dist`
