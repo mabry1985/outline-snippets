@@ -3,7 +3,7 @@
     "prefix": "outline story",
     "body": [
       "import { html, TemplateResult } from 'lit';",
-      "import { ifDefined } from 'lit/directives/if-defined';",
+      "import { ifDefined } from 'lit/directives/if-defined.js';",
       "import './${TM_FILENAME/(.*?)\\..+/$1/}';",
       "",
       "export default {",
@@ -14,6 +14,8 @@
       "\t\t\tcontrol: {",
       "\t\t\t\ttype: 'text',",
       "\t\t\t},",
+      "\t\t\tname: 'string-prop',",
+      "\t\t\tdescription: 'Document property here',",
       "\t\t},",
       "\t},",
       "\targs: {",
